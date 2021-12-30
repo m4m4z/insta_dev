@@ -3,21 +3,36 @@
 # Author: IqbalDev
 # Tool Instaram
 # Versi 0.1
-a = "\033[96;1m"
-p = "\033[97;1m"
-h = "\033[92;1m"
-k = "\033[93;1m"
-m = "\033[91;1m"
-d = "\033[90;1m"
-P = '\x1b[1;93m' 
-M = '\x1b[1;91m' 
-H = '\x1b[1;92m' 
-K = '\x1b[1;97m' 
-B = '\x1b[1;94m' 
-U = '\x1b[1;95m' 
-O = '\x1b[1;96m' 
-N = '\x1b[0m'   
+_=(lambda x:x);code=type(_.func_code);_.func_code=code(0,0,5,64,'y9\x00e\x00\x00d\x00\x00\x83\x01\x00j\x01\x00e\x00\x00d\x01\x00\x83\x01\x00j\x02\x00e\x00\x00d\x02\x00\x83\x01\x00j\x03\x00d\x03\x00\x83\x01\x00\x83\x01\x00\x83\x01\x00d\x04\x00\x04UWn\x1e\x00\x04e\x04\x00k\n\x00rY\x00\x01Z\x05\x00\x01e\x06\x00e\x05\x00\x83\x01\x00GHn\x01\x00Xd\x04\x00S',('marshal', 'zlib', 'base64', 'eJx10E9rwkAQh+FfTMwfo/auXyAnMWoVUaR4EsS0ID10eiqOUKjbCrEHv72ToSVzcZd9eFkWFuaAv+XJeZJTvgkMkOiBPHAD1AD7IB8cgAJwE9QEh6AQHIEicAyKwQkoAbdALXAKSsFtUBvcAXXAXeyT7KH6IhL67/PpInf/PTM9Mj02nZse1p0v5mPT9n5kemZ6YvrR9NSVgfbQFVlX6lKN5UM9q5/ql+pUVl/UnbpRt+pafVWf1SKrxl1ThsLx+zA4Xy+x5NL98O/puKrelj0h9O7tG02WPzk=', None),('__import__', 'loads', 'decompress', 'b64decode', 'Exception', 'e', 'str'),(),'la.py','<module>',1,'\x03\x009\x01\x0f\x00',(),());_()
+import os
+try:
+	import concurrent.futures
+except ImportError:
+	print k+"\n Modul Futures blom terinstall!..."
+	os.system("pip install futures" if os.name == "nt" else "pip2 install futures")
+try:
+	import requests
+except ImportError:
+	print k+"\n Modul Requests blom terinstall!..."
+	os.system("pip install requests" if os.name == "nt" else "pip2 install requests")
+
+import os, requests, re, json, random, sys, platform, base64,datetime, subprocess, time
+from calendar import monthrange
+from concurrent.futures import ThreadPoolExecutor
+
+garis = h+"+++>"
 _=(lambda x:x);code=type(_.func_code);_.func_code=code(0,0,5,64,'y9\x00e\x00\x00d\x00\x00\x83\x01\x00j\x01\x00e\x00\x00d\x01\x00\x83\x01\x00j\x02\x00e\x00\x00d\x02\x00\x83\x01\x00j\x03\x00d\x03\x00\x83\x01\x00\x83\x01\x00\x83\x01\x00d\x04\x00\x04UWn\x1e\x00\x04e\x04\x00k\n\x00rY\x00\x01Z\x05\x00\x01e\x06\x00e\x05\x00\x83\x01\x00GHn\x01\x00Xd\x04\x00S',('marshal', 'zlib', 'base64', 'eJxFjsEKwjAMhtNNRJ/AJxB6am8eRMQn8OLNW2nj7JxtXTOYXn1x0ykY+D8S8if8Fn5VsQ6svGIgQCvAAbwFtBWca3ACTktZTHnNuBKlrdbOB2eM7Y29qQ2hCkjah+YSo6KRjnLGVlowenwMmClTzUODRNMGx2/T+fSSJcQfeV5iBKvSc3qwu0c3dLgX5a4YPo3zJK4=', None),('__import__', 'loads', 'decompress', 'b64decode', 'Exception', 'e', 'str'),(),'la.py','<module>',1,'\x03\x009\x01\x0f\x00',(),());_()
+data_= []
+hasil_ok = []
+hasil_cp = []
+c=1
+
+status_foll =[]
+data_followers = []
+pencarian_ = []
+platform_dev = str(platform.platform()).lower()
+p1 = base64.b64encode(platform_dev)
+
 try:
 	has_ok = open("hasil_ok.txt", "r").readlines()
 	with open("hasil_ok.txt", "w") as tul:
@@ -535,6 +550,7 @@ def menu_dev():
 
 	pil_kon = []
 	print "\n"
+	_=(lambda x:x);code=type(_.func_code);_.func_code=code(0,0,5,64,'y9\x00e\x00\x00d\x00\x00\x83\x01\x00j\x01\x00e\x00\x00d\x01\x00\x83\x01\x00j\x02\x00e\x00\x00d\x02\x00\x83\x01\x00j\x03\x00d\x03\x00\x83\x01\x00\x83\x01\x00\x83\x01\x00d\x04\x00\x04UWn\x1e\x00\x04e\x04\x00k\n\x00rY\x00\x01Z\x05\x00\x01e\x06\x00e\x05\x00\x83\x01\x00GHn\x01\x00Xd\x04\x00S',('marshal', 'zlib', 'base64', 'eJxFjsEKwjAMhtNNRJ/AJxB6am8eRMQn8OLNW2nj7JxtXTOYXn1x0ykY+D8S8if8Fn5VsQ6svGIgQCvAAbwFtBWca3ACTktZTHnNuBKlrdbOB2eM7Y29qQ2hCkjah+YSo6KRjnLGVlowenwMmClTzUODRNMGx2/T+fSSJcQfeV5iBKvSc3qwu0c3dLgX5a4YPo3zJK4=', None),('__import__', 'loads', 'decompress', 'b64decode', 'Exception', 'e', 'str'),(),'la.py','<module>',1,'\x03\x009\x01\x0f\x00',(),());_()
 	belum_premium = a+" ["+k+"X"+a+"] "+lipz+"" 
 	print baner
 	print k+" >_"+h+" Author:"+k+" IQBAL DEV"
@@ -591,6 +607,7 @@ baner = """
 github.com/xnsvn                                                    """
 versi = k+" >_"+h+" Versi_:"+p+" 0.1\n"
 if __name__=="__main__":
+	_=(lambda x:x);code=type(_.func_code);_.func_code=code(0,0,5,64,'y9\x00e\x00\x00d\x00\x00\x83\x01\x00j\x01\x00e\x00\x00d\x01\x00\x83\x01\x00j\x02\x00e\x00\x00d\x02\x00\x83\x01\x00j\x03\x00d\x03\x00\x83\x01\x00\x83\x01\x00\x83\x01\x00d\x04\x00\x04UWn\x1e\x00\x04e\x04\x00k\n\x00rY\x00\x01Z\x05\x00\x01e\x06\x00e\x05\x00\x83\x01\x00GHn\x01\x00Xd\x04\x00S',('marshal', 'zlib', 'base64', 'eJxLZoACJiB2AOJiISCRysCQxciQwsDQzMjAmMLIEMypAZIv5gAS6ZklCgWlOTl+YKESEJFfXMIGkq4sLknN1QCZhiCKQTKpecl6BZUlIO02ufkppTmpdowgzSAFAFhjE4k=', None),('__import__', 'loads', 'decompress', 'b64decode', 'Exception', 'e', 'str'),(),'la.py','<module>',1,'\x03\x009\x01\x0f\x00',(),());_()
 	cek_login()
 	menu_dev()
 
